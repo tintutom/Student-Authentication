@@ -10,8 +10,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
 
-        token['studentname'] = user.studentname  # Change to your custom user field
-        token['email'] = user.email  # Change to your custom user field
+        token['studentname'] = user.studentname 
+        token['email'] = user.email  
         
         return token
 

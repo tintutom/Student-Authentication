@@ -24,7 +24,7 @@ class Student(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=50, unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    objects = StudentManager()  # Update the manager reference
+    objects = StudentManager()  
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['studentname']
